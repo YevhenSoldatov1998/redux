@@ -1,1 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Caveat:400,700|Didact+Gothic&display=swap&subset=cyrillic');
+body{
+    font-family: 'Caveat', cursive;
+}

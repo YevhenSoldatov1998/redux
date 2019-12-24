@@ -1,4 +1,5 @@
 import React from 'react'
+import './Todo.scss'
 
 const Todo = (props) => {
     const callParentClick = (e) => {
@@ -16,25 +17,47 @@ const Todo = (props) => {
     const callHandleDeleteProduct = (recipe) => {
         props.handleDeleteProduct(recipe)
     }
+    const callHandleChangePrice = (e) => {
+        let price = e.target.value;
+        props.handleChangePrice(price)
+    }
+    const callHandleCalculateAllProduct = () => {
+        props.handleCalculateAllProduct()
+    }
     return (
-        <div>
-            <h1 className="title">Рецепт</h1>
+        <div className="todo-wrap">
+            <div className="christmas"></div>
+            <h1 className="title">Продукты на НОВОГОДНИЕ ПРАЗНИКИ</h1>
             <form onSubmit={callParentClick.bind(this)} action="">
-                <input type="text" onChange={callParentChange.bind(this)} value={props.product} placeholder="Продукт"/>
+                <input type="text"
+                       onChange={callParentChange.bind(this)}
+                       value={props.product}
+                       placeholder="Продукт"/>
+
                 <input type="text"
                        onChange={callHandleChangeCount.bind(this)}
                        value={props.count}
                        placeholder="Количество"
+
+                />
+                <input type="text"
+                       className={"input-price"}
+                       placeholder="Цена"
+                       value={props.price}
+                       onChange={callHandleChangePrice.bind(this)}
                 />
                 <button type={"submit"}>Добавить</button>
+                <span  onClick={callHandleCalculateAllProduct.bind(this)} className={"calculate"}>Посчитать стоимость </span>
+                <div>Сума: {props.sum} </div>
             </form>
             <div className="recipes">
                 {props.recipes.map(recipe => {
-                    return <div>
-                        <span style={{marginRight: '20px'}}>{recipe.product}</span>
-                        <small style={{marginRight: '20px'}}>{recipe.count}</small>
-                        <span
-                            onClick={callHandleDeleteProduct.bind(this, recipe)}>&times;</span>
+                    return <div className={"recipes-item"}>
+                        <span className={"recipes-item__product"}>{recipe.product}</span>
+                        <span className={"recipes-item__count"}>{recipe.count}</span>
+                        <span className={"recipes-item__count"}>{recipe.price}</span>
+                        <span className={"close"}
+                              onClick={callHandleDeleteProduct.bind(this, recipe)}>&times;</span>
                     </div>
                 })
                 }
