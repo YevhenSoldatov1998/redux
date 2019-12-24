@@ -21,9 +21,7 @@ const Todo = (props) => {
         let price = e.target.value;
         props.handleChangePrice(price)
     }
-    const callHandleCalculateAllProduct = () => {
-        props.handleCalculateAllProduct()
-    }
+
     return (
         <div className="todo-wrap">
             <div className="christmas"></div>
@@ -40,19 +38,18 @@ const Todo = (props) => {
                        placeholder="Количество"
 
                 />
-                <input type="text"
+                <input type="number"
                        className={"input-price"}
                        placeholder="Цена"
                        value={props.price}
                        onChange={callHandleChangePrice.bind(this)}
                 />
                 <button type={"submit"}>Добавить</button>
-                <span  onClick={callHandleCalculateAllProduct.bind(this)} className={"calculate"}>Посчитать стоимость </span>
                 <div>Сума: {props.sum} </div>
             </form>
             <div className="recipes">
                 {props.recipes.map(recipe => {
-                    return <div className={"recipes-item"}>
+                    return <div key={recipe.id} className={"recipes-item"}>
                         <span className={"recipes-item__product"}>{recipe.product}</span>
                         <span className={"recipes-item__count"}>{recipe.count}</span>
                         <span className={"recipes-item__count"}>{recipe.price}</span>

@@ -19,7 +19,9 @@ html,body {
 .title{
   font-size: 52px;
 }
-
+.close{
+  cursor: pointer;
+}
 .recipes-item {
   padding: 5px 0;
 
@@ -32,11 +34,7 @@ html,body {
     margin-left: 50px;
   }
 }
-.calculate{
-  margin-left: 20px;
-  cursor: pointer;
-  text-decoration: underline;
-}
+
 
 form{
   font-size: 30px;

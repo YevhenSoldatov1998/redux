@@ -15,15 +15,31 @@ export const CALCULATION_ALL_PRODUCT_CREATOR = () => ({type: CALCULATION_ALL_PRO
 let initialState = {
     product: '',
     count: '',
-    price: null,
+    price: '',
     recipes: [],
     sum: 0,
+    id: 1
 
 }
+
 const reducerTodo = (state = initialState, action) => {
     switch (action.type) {
         case ADD_NEW_PRODUCT:
-            return {...state, sum: state.sum + +state.price.match(/\d+/g).join(''),  recipes: [...state.recipes, {product: state.product, count: state.count, price: state.price}]};
+
+            if(state.product && state.count && state.price){
+                debugger
+                return {
+                    ...state,
+                    recipes: [...state.recipes, {product: state.product, count: state.count, price: state.price , id: state.id + 1}],
+                    sum:  +state.price + state.sum,
+                    product: '',
+                    count: '',
+                    price: ''
+
+                };
+            }
+            return state
+
         case CHANGE_PRODUCT:
             return {...state, product: action.text};
         case CHANGE_COUNT:
@@ -34,7 +50,7 @@ const reducerTodo = (state = initialState, action) => {
             let newState = state.recipes.filter(currentRecipe => {
                 return currentRecipe !== action.recipe
             });
-            return {...state, recipes: newState};
+            return {...state, recipes: newState, sum: state.sum - action.recipe.price};
         default:
             return state
     }

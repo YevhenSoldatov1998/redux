@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4ea5642-f1a4-4c80-9ca8-12e7126fdcde" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Todo/Todo.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/normalize.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Todo/Todo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Todo/Todo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Todo/Todo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Todo/Todo.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Todo/TodoContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Todo/TodoContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducerTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducerTodo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,6 +101,7 @@
       <workItem from="1577113596392" duration="76000" />
       <workItem from="1577122051473" duration="11552000" />
       <workItem from="1577173912848" duration="2301000" />
+      <workItem from="1577195152869" duration="4623000" />
     </task>
     <task id="LOCAL-00001" summary="Setting filter">
       <created>1577132852156</created>
@@ -115,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577132852156</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add calculation">
+      <created>1577195222473</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1577195222473</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +138,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Setting filter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setting filter" />
+    <MESSAGE value="add calculation" />
+    <option name="LAST_COMMIT_MESSAGE" value="add calculation" />
   </component>
 </project>
